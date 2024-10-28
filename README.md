@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Election Dashboard
 
-## Getting Started
+A React-based dashboard for visualizing election poll data with population-weighted analysis. This application processes poll data and weights the results based on municipality population data from IBGE.
 
-First, run the development server:
+## Features
 
+- Upload and process CSV poll data files
+- Sync with IBGE municipality population data
+- Population-weighted vote calculations
+- Interactive line chart visualization
+
+## Prerequisites
+
+- Node.js (v14 or higher)
+- pnpm
+
+## Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [your-repository-url]
+cd election-dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Start the development server:
+```bash
+pnpm dev
+```
 
-## Learn More
+2. Open your browser and navigate to `http://localhost:3000`
 
-To learn more about Next.js, take a look at the following resources:
+3. Click "Atualizar Base IBGE" to fetch current municipality data
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Upload your poll data CSV file using the "Upload CSV" button
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## CSV File Format
 
-## Deploy on Vercel
+Your poll data CSV file should follow this format:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```csv
+ID_PESQUISA,DATA_PESQUISA,MUNICÍPIO,ESTADO,INTENÇÃO DE VOTO
+P1,04/09/2022,Quixaba,PE,A
+P1,04/09/2022,Jatobá,PE,B
+P1,04/09/2022,Brasília,DF,B
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Dependencies
+
+Main dependencies used in this project:
+
+- Next.js
+- React
+- Recharts (for data visualization)
+- Axios (for API requests)
+- Lucide React (for icons)
+- shadcn/ui (for UI components)
