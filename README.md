@@ -1,7 +1,7 @@
 # Election Dashboard
 
 A React-based dashboard for visualizing election poll data with population-weighted analysis. This application processes poll data and weights the results based on municipality population data from IBGE.
-
+![image](https://github.com/user-attachments/assets/6e6a0210-db84-4e7b-83e7-dd29fffd6108)
 ## Features
 
 - Upload and process CSV poll data files
